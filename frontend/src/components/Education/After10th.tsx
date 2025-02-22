@@ -1,7 +1,17 @@
 import React from 'react';
-import { Rocket, BrainCircuit, TestTube2, GraduationCap, Briefcase, Stethoscope } from 'lucide-react';
+import { Rocket, BrainCircuit, FlaskConical, GraduationCap, TestTube2, Briefcase, Stethoscope } from 'lucide-react';
 
-const After10th = () => {
+interface CareerPillProps {
+  icon: React.ReactNode;
+  title: string;
+}
+
+interface MetricCircleProps {
+  value: string;
+  label: string;
+}
+
+const After10th: React.FC = () => {
   return (
     <div className="mt-20 min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white p-8">
       <header className="max-w-6xl mx-auto text-center mb-16 animate-fade-in">
@@ -74,8 +84,8 @@ const After10th = () => {
           </h2>
           <div className="grid gap-6">
             <div className="diagram-card bg-gradient-to-r from-purple-800/50 to-blue-800/50">
-              <h3 className="text-xl font-semibold mb-3">POLYCET Exam Structure</h3>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <h3 className="text-xl flex items-center justify-center font-semibold mb-3 mt-7">POLYCET Exam Structure</h3>
+              <div className="grid grid-cols-3 gap-4 text-center flex justify-center items-center gap-x-40">
                 <MetricCircle value="60" label="Maths" />
                 <MetricCircle value="30" label="Physics" />
                 <MetricCircle value="30" label="Chemistry" />
@@ -96,14 +106,14 @@ const After10th = () => {
   );
 };
 
-const CareerPill = ({ icon, title }) => (
-  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full hover:bg-white/10 transition-colors">
+const CareerPill: React.FC<CareerPillProps> = ({ icon, title }) => (
+  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 my-5 rounded-full hover:bg-white/10 transition-colors mb-2.5">
     {icon}
     <span>{title}</span>
   </div>
 );
 
-const MetricCircle = ({ value, label }) => (
+const MetricCircle: React.FC<MetricCircleProps> = ({ value, label }) => (
   <div className="metric-circle">
     <div className="value">{value}</div>
     <div className="label">{label}</div>

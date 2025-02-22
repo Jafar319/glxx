@@ -1,86 +1,159 @@
-import React from "react";
+import React from 'react';
+import { Atom, Landmark, Palette, Code, FlaskConical, BookOpen, Scale, Network, Laptop, Calculator } from 'lucide-react';
 
-const Degree = () => {
+const Degree: React.FC = () => {
   return (
-    <div className="mt-20 bg-gradient-to-r from-blue-600/50 via-gray-700 to-violet-600/50 text-white min-h-screen p-8">
-      <h1 className="text-5xl font-extrabold mb-10 text-center drop-shadow-lg">
-        Degree Options
-      </h1>
-      
-      <div className="mb-8 bg-white/10 rounded-2xl p-8 shadow-lg backdrop-blur-md space-y-6">
-        <h2 className="text-3xl font-semibold mb-5">B.Sc - Bachelor of Science</h2>
-        <p className="text-white/80">Specializations:</p>
-        <ul className="list-disc list-inside text-white/80">
-          <li>Physics</li>
-          <li>Chemistry</li>
-          <li>Mathematics</li>
-          <li>Statistics</li>
-          <li>Applied Physics</li>
-          <li>Applied Chemistry</li>
-          <li>Applied Mathematics</li>
-        </ul>
-        <p className="text-white/80">Career Opportunities:</p>
-        <ul className="list-disc list-inside text-white/80">
-          <li>Research Scientist</li>
-          <li>Data Analyst</li>
-          <li>Mathematician</li>
-          <li>Physicist</li>
-          <li>Chemist</li>
-          <li>Statistician</li>
-        </ul>
-      </div>
+    <div className="mt-20 min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white p-8">
+      <header className="max-w-6xl mx-auto text-center mb-16 animate-fade-in">
+        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text text-transparent">
+          Undergraduate Degree Programs
+        </h1>
+        <p className="text-xl text-gray-300">Explore diverse academic pathways for your future</p>
+      </header>
 
-      <div className="mb-8 bg-white/10 rounded-2xl p-8 shadow-lg backdrop-blur-md space-y-6">
-        <h2 className="text-3xl font-semibold mb-5">Commerce Stream</h2>
-        <ul className="list-disc list-inside text-white/80">
-          <li>B.Com - General</li>
-          <li>B.Com - Computers</li>
-          <li>BBA - Bachelor of Business Administration</li>
-          <li>BBM - Bachelor of Business Management</li>
-          <li>BMS - Bachelor of Management Studies</li>
-          <li>CA - Chartered Accountant</li>
-        </ul>
-        <p className="text-white/80">Career Opportunities:</p>
-        <p className="text-white/80">
-          Finance, Business, Accounting, Banking, and Management. Great choice for students interested in economics, trade, investment, taxation, and entrepreneurship.
-        </p>
-      </div>
+      <main className="max-w-6xl mx-auto space-y-8">
+        {/* Science Section */}
+        <div className="bg-gray-800/30 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
+          <div className="flex items-center gap-3 mb-6">
+            <FlaskConical className="text-blue-400" size={32} />
+            <h2 className="text-3xl font-bold">B.Sc - Bachelor of Science</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-blue-300 flex items-center gap-2">
+                <Atom className="w-5 h-5" /> Specializations
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {['Physics', 'Chemistry', 'Mathematics', 'Statistics'].map((subject, index) => (
+                  <div key={index} className="flex items-center gap-2 p-3 bg-white/5 rounded-lg">
+                    <BookOpen className="w-4 h-4 text-blue-400" />
+                    <span>{subject}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-      <div className="mb-8 bg-white/10 rounded-2xl p-8 shadow-lg backdrop-blur-md space-y-6">
-        <h2 className="text-3xl font-semibold mb-5">Arts and Humanities Stream</h2>
-        <ul className="list-disc list-inside text-white/80">
-          <li>BA - Bachelor of Arts</li>
-          <li>BFA - Bachelor of Fine Arts</li>
-          <li>BHM - Bachelor of Hotel Management</li>
-          <li>B.Ed - Bachelor of Education</li>
-          <li>LLB - Bachelor of Law</li>
-        </ul>
-        <p className="text-white/80">Career Opportunities:</p>
-        <ul className="list-disc list-inside text-white/80">
-          <li>Government Jobs & Administration</li>
-          <li>Law & Legal Studies</li>
-          <li>Media & Journalism</li>
-          <li>Psychology & Social Sciences</li>
-          <li>Teaching & Education</li>
-          <li>Design & Creative Fields</li>
-          <li>Business & Management</li>
-        </ul>
-      </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-purple-300 flex items-center gap-2">
+                <Laptop className="w-5 h-5" /> Career Paths
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {['Research Scientist', 'Data Analyst', 'Chemist', 'Statistician'].map((career, index) => (
+                  <div key={index} className="p-3 bg-white/5 rounded-lg text-sm">
+                    {career}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div className="mb-8 bg-white/10 rounded-2xl p-8 shadow-lg backdrop-blur-md space-y-6">
-        <h2 className="text-3xl font-semibold mb-5">BCA - Bachelor of Computer Applications</h2>
-        <p className="text-white/80">
-          Focuses on programming, software development, and IT systems. Ideal for those looking to build a career in the IT industry.
-        </p>
-        <p className="text-white/80">Career Opportunities:</p>
-        <ul className="list-disc list-inside text-white/80">
-          <li>Software & IT Development</li>
-          <li>Networking & IT Infrastructure</li>
-          <li>Database Management</li>
-          <li>IT Support & Services</li>
-          <li>Advanced Studies & Research</li>
-        </ul>
-      </div>
+        {/* Commerce Section */}
+        <div className="bg-gray-800/30 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
+          <div className="flex items-center gap-3 mb-6">
+            <Landmark className="text-green-400" size={32} />
+            <h2 className="text-3xl font-bold">Commerce & Business Programs</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-green-300 flex items-center gap-2">
+                <Calculator className="w-5 h-5" /> Core Degrees
+              </h3>
+              <div className="grid gap-3">
+                {['B.Com General', 'B.Com Computers', 'BBA', 'CA Foundation'].map((program, index) => (
+                  <div key={index} className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                    <div className={`w-2 h-2 rounded-full ${index % 2 === 0 ? 'bg-green-400' : 'bg-blue-400'}`} />
+                    <span>{program}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-blue-300 flex items-center gap-2">
+                <Network className="w-5 h-5" /> Career Landscape
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                Opportunities in finance, entrepreneurship, banking, and corporate management. Ideal for careers in:
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Investment Banking', 'Tax Consultancy', 'Business Analytics', 'Corporate Law'].map((field, index) => (
+                  <span key={index} className="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">
+                    {field}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Arts Section */}
+        <div className="bg-gray-800/30 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
+          <div className="flex items-center gap-3 mb-6">
+            <Palette className="text-purple-400" size={32} />
+            <h2 className="text-3xl font-bold">Arts & Humanities</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-purple-300">Degree Options</h3>
+              <div className="grid gap-3">
+                {['BA General', 'BFA', 'BHM', 'LLB'].map((program, index) => (
+                  <div key={index} className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                    <Scale className="w-4 h-4 text-purple-300" />
+                    <span>{program}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-pink-300">Career Spectrum</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {['Journalism', 'Civil Services', 'Museum Curator', 'Social Work'].map((career, index) => (
+                  <div key={index} className="p-3 bg-white/5 rounded-lg text-center">
+                    {career}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BCA Section */}
+        <div className="bg-gradient-to-r from-blue-800/30 to-purple-800/30 rounded-2xl p-8 backdrop-blur-lg">
+          <div className="flex items-center gap-3 mb-6">
+            <Code className="text-cyan-400" size={32} />
+            <h2 className="text-3xl font-bold">Computer Applications (BCA)</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-cyan-300">Curriculum Focus</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Programming', 'Database Systems', 'Web Development', 'Cloud Computing'].map((topic, index) => (
+                  <span key={index} className="px-3 py-1 bg-cyan-600/20 text-cyan-300 rounded-full text-sm">
+                    {topic}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-blue-300">Career Pathways</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {['Software Developer', 'IT Consultant', 'System Analyst', 'Network Engineer'].map((role, index) => (
+                  <div key={index} className="p-3 bg-white/5 rounded-lg text-sm text-center">
+                    {role}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
