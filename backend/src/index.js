@@ -3,12 +3,14 @@ const app = express();
 const env = require("dotenv");
 const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
+import cors from 'cors';
 
 const db = require("./DB/dbConnect.js");
 env.config();
 app.use(express.json());
 // Allow only specific origins
 const allowedOrigins = ["http://localhost:2222"];
+
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -24,6 +26,7 @@ const corsOptions = {
 // Use CORS middleware
 app.use(cors(corsOptions));
 app.use("/auth", authRoutes);
+app.use(cors({ origin: '*' }));
 
 // app.post("/auth/signup", (req, res) => {
 //   console.log(JSON.stringify(req.body, null, 2));
@@ -33,7 +36,6 @@ app.use("/auth", authRoutes);
 //   console.log(JSON.stringify(req.body, null, 2));
 //   res.send("Signin successfully");
 // });
-app.listen(3000, () => {
-  db();
-  console.log("server started successfully");
-});
+app.use(cors({ 
+  origin: 'https://your-frontend-domain.onrender.com' // Replace with your actual frontend URL
+}));
