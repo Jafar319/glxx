@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import useSWR from "swr";
 import AxiosFetcher from "./AxiosFetcher";
-import { VITE_LAMBDA_URL } from "@constants/index";
+// import { VITE_LAMBDA_URL } from "@constants/index";
 
 
 // ENDPOINTS keys
@@ -9,9 +9,9 @@ export const ENDPOINTS = {
   // auth
   login: "/auth/login",
   signup: "/auth/signup",
-  // configSite: "/server/config-site",
-  // registerTrial: "/user/trial",
-  // registerPremium: "/user/premium",
+  configSite: "/server/config-site",
+  registerTrial: "/user/trial",
+  registerPremium: "/user/premium",
 };
 // Instance of AxiosFetcher
 // console.log({ meta_vite: import.meta.env });

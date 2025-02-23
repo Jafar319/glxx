@@ -1,5 +1,7 @@
 import React from 'react';
-import { Rocket, BrainCircuit, FlaskConical, GraduationCap, TestTube2, Briefcase, Stethoscope } from 'lucide-react';
+import { Rocket, BrainCircuit,  GraduationCap, TestTube2, Briefcase, Stethoscope } from 'lucide-react';
+
+// FlaskConical,
 
 interface CareerPillProps {
   icon: React.ReactNode;

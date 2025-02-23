@@ -47,7 +47,7 @@ const isTokenExpired = (token: string): boolean => {
 };
 
 export const rootStore = create<rootStore>()(
-  subscribeWithSelector((set, get) => ({
+  subscribeWithSelector((set) => ({
     data: INIT_DATA,
 
     initializeStore: () => {

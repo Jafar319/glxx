@@ -1,6 +1,6 @@
 import { rootStore } from "@store/index";
 import Icons from "../Hero/icons";
-import { log } from "console";
+// import { log } from "console";
 
 const Navbar = () => {
   const { isIn } = rootStore((state) => state.data);

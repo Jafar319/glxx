@@ -1,5 +1,5 @@
-import path from "path";
-import { text } from "stream/consumers";
+// import path from "path";
+// import { text } from "stream/consumers";
 
 interface typeTestimonials{
   text:string;

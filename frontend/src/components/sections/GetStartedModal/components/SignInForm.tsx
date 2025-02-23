@@ -7,9 +7,9 @@ import { AxiosError } from "axios";
 import { rootStore } from "@store/index";
 import React, { useState } from "react";
 import Loader from "@components/common/Loader";
-import Pricing from "@components/sections/Pricing";
+// import Pricing from "@components/sections/Pricing";
 import { cn } from "@utils/index";
-import { log } from "console";
+// import { log } from "console";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
   setLoginSuccess: React.Dispatch<React.SetStateAction<boolean>>
 };
 
-const SignInForm = ({ toggleSignUp, loginSuccess, setLoginSuccess }: Props) => {
+const SignInForm = ({ toggleSignUp, loginSuccess }: Props) => {
   // hooks
   const {
     register,
@@ -27,7 +27,7 @@ const SignInForm = ({ toggleSignUp, loginSuccess, setLoginSuccess }: Props) => {
     // control,
     formState: { errors: formErrors },
     // clearErrors,
-    reset,
+    // reset,
   } = useForm({
     defaultValues: {
       email: "",
@@ -40,8 +40,8 @@ const SignInForm = ({ toggleSignUp, loginSuccess, setLoginSuccess }: Props) => {
 
   // states
   const [logging, setLogging] = useState(false);
-  const [hasDomain, setHasDomain] = useState(false);
-  const [isExpiredPlan, setIsExpiredPlan] = useState(false);
+  const [hasDomain] = useState(false);
+  // const [isExpiredPlan, setIsExpiredPlan] = useState(false);
   const navigate=useNavigate();
   // methods
   const onSubmit = async (data: Record<string, string>) => {
@@ -53,11 +53,11 @@ const SignInForm = ({ toggleSignUp, loginSuccess, setLoginSuccess }: Props) => {
       if (response.message === "Login successful" ) {
         console.log("loginSucess");
         
-        const _resetting = () => {
-          // reset form
-          reset();
-          setLogging(false);
-        }
+        // const _resetting = () => {
+        //   // reset form
+        //   reset();
+        //   setLogging(false);
+        // }
         // console.log(response.token);
         
         // handle login toen and state at client
