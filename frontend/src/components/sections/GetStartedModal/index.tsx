@@ -1,23 +1,23 @@
 import { rootStore } from "@store/index";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SignInForm from "./components/SignInForm";
 import SignUpForm from "./components/SignUpForm";
 
 const GetStartedModal = () => {
   // store
-  // const isStarting = rootStore(({ data }) => data.isStarting);
+  const isStarting = rootStore(({ data }) => data.isStarting);
   const isSignUp = rootStore(({ data }) => data.isSignUp);
   const toggleStarted = rootStore(({ toggleStarted }) => toggleStarted);
   const toggleSignUp = rootStore(({ toggleSignUp }) => toggleSignUp);
 
   // states
   const [loginSuccess, setLoginSuccess] = useState(false);
-  // const [key, setKey] = useState(0);
+  const [key, setKey] = useState(0);
 
-  // useEffect(() => {
-  //   setKey((prevKey) => prevKey + 1); // Forces re-render on state change
-  // }, [isStarting]);
-  // if (!isStarting) return null;
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1); // Forces re-render on state change
+  }, [isStarting]);
+  if (!isStarting) return null;
   
   return (
     <div
