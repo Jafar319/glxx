@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+// import type { Config } from 'tailwindcss';
+import prelinePlugin from 'preline/plugin';
+
+const config: Config = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -12,13 +14,13 @@ export default {
       },
       keyframes: {
         fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },
   },
-  plugins: [require("preline/plugin"),require("postcss-nesting"),
-    require("tailwindcss"),
-    require("autoprefixer")],
+  plugins: [prelinePlugin], // ❌ Removed postcssNesting
 };
+
+export default config;
