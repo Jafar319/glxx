@@ -21,7 +21,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 2222,
+    port: 5173,
   },
   preview: {
     port: 2222,
