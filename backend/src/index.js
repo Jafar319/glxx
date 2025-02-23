@@ -37,5 +37,5 @@ app.use(cors({ origin: '*' }));
 //   res.send("Signin successfully");
 // });
 app.use(cors({ 
-  origin: 'https://your-frontend-domain.onrender.com' // Replace with your actual frontend URL
+  origin: 'https://glxx-4.onrender.com' // Replace with your actual frontend URL
 }));
