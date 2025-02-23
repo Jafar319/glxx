@@ -1,11 +1,11 @@
 import { rootStore } from "@store/index";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SignInForm from "./components/SignInForm";
 import SignUpForm from "./components/SignUpForm";
 
 const GetStartedModal = () => {
   // store
-  const isStarting = rootStore(({ data }) => data.isStarting);
+  // const isStarting = rootStore(({ data }) => data.isStarting);
   const isSignUp = rootStore(({ data }) => data.isSignUp);
   const toggleStarted = rootStore(({ toggleStarted }) => toggleStarted);
   const toggleSignUp = rootStore(({ toggleSignUp }) => toggleSignUp);
