@@ -1,9 +1,9 @@
 
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 
-import React from 'react'
+// import React from 'react'
 const Divider = lazy(() => import("@components/common/Divider"));
-const Navbar = lazy(() => import("@components/sections/Navbar"));
+// const Navbar = lazy(() => import("@components/sections/Navbar"));
 const Hero = lazy(() => import("@components/sections/Hero"));
 const Features = lazy(() => import("@components/sections/Features"));
 const Testimonials = lazy(() => import("@components/sections/Testimonials"));

@@ -1,26 +1,26 @@
-import { cn } from "@utils/index";
+
 import { lazy, Suspense, useEffect } from "react";
 import { rootStore } from "./store";
 
 import "./App.css";
 import { Outlet } from "react-router-dom";
 
-const Divider = lazy(() => import("@components/common/Divider"));
+// const Divider = lazy(() => import("@components/common/Divider"));
 const Navbar = lazy(() => import("@components/sections/Navbar"));
-const Hero = lazy(() => import("@components/sections/Hero"));
-const Features = lazy(() => import("@components/sections/Features"));
-const Testimonials = lazy(() => import("@components/sections/Testimonials"));
-const Pricing = lazy(() => import("@components/sections/Pricing"));
-const Footer = lazy(() => import("@components/sections/Footer"));
-const GetStartedModal = lazy(
-  () => import("@components/sections/GetStartedModal")
-);
-const CreateSiteModal = lazy(
-  () => import("@components/sections/CreateSiteModal")
-);
-const PaymentModal = lazy(
-  () => import("@components/sections/PaymentModal")
-);
+// const Hero = lazy(() => import("@components/sections/Hero"));
+// const Features = lazy(() => import("@components/sections/Features"));
+// const Testimonials = lazy(() => import("@components/sections/Testimonials"));
+// const Pricing = lazy(() => import("@components/sections/Pricing"));
+// const Footer = lazy(() => import("@components/sections/Footer"));
+// const GetStartedModal = lazy(
+//   () => import("@components/sections/GetStartedModal")
+// );
+// const CreateSiteModal = lazy(
+//   () => import("@components/sections/CreateSiteModal")
+// );
+// const PaymentModal = lazy(
+//   () => import("@components/sections/PaymentModal")
+// );
 
 function App() {
   // store
