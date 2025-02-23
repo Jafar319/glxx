@@ -14,9 +14,9 @@ const GetStartedModal = () => {
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [key, setKey] = useState(0);
 
-  useEffect(() => {
-    setKey((prevKey) => prevKey + 1); // Forces re-render on state change
-  }, [isStarting]);
+  // useEffect(() => {
+  //   setKey((prevKey) => prevKey + 1); // Forces re-render on state change
+  // }, [isStarting]);
   if (!isStarting) return null;
   
   return (
