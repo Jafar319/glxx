@@ -4,7 +4,7 @@ import path from "path";
 import { defineConfig, splitVendorChunkPlugin } from "vite";
 import { compression as viteCompression } from "vite-plugin-compression2";
 import svgr from "vite-plugin-svgr";
-import { visualizer } from "rollup-plugin-visualizer";
+// import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,10 +32,10 @@ export default defineConfig({
     react(),
     terser(),
     splitVendorChunkPlugin(),
-    visualizer({
-      filename: "./dist/stats.html",
-      open: true,
-    }),
+    // visualizer({
+    //   filename: "./dist/stats.html",
+    //   open: true,
+    // }),
     viteCompression({
       algorithm: "brotliCompress",
       exclude: [/\.(br)$/, /\.(gz)$/],

@@ -50,7 +50,6 @@
     "typescript": "^5.0.2",
     "vite": "^4.5.1",
     "vite-plugin-compression2": "^0.10.6",
-    "vite-plugin-svgr": "^4.1.0",
-    "@types/jwt-decode": "^4.0.0"
+    "vite-plugin-svgr": "^4.1.0"
   }
 }

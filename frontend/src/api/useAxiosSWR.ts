@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import useSWR from "swr";
 import AxiosFetcher from "./AxiosFetcher";
-// import { VITE_LAMBDA_URL } from "@constants/index";
-
+import { VITE_BE_DOMAIN, VITE_LAMBDA_URL } from "@constants/index";
 
 // ENDPOINTS keys
 export const ENDPOINTS = {
@@ -15,8 +14,8 @@ export const ENDPOINTS = {
 };
 // Instance of AxiosFetcher
 // console.log({ meta_vite: import.meta.env });
-export const fetcher = new AxiosFetcher(import.meta.env.VITE_BE_DOMAIN);
-export const serverFetcher = new AxiosFetcher(import.meta.env.VITE_LAMBDA_URL);
+export const fetcher = new AxiosFetcher(VITE_BE_DOMAIN);
+export const serverFetcher = new AxiosFetcher(VITE_LAMBDA_URL);
 
 // config for swr
 const SWRoptions = {
