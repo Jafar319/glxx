@@ -8,7 +8,7 @@ const db = require("./DB/dbConnect.js");
 env.config();
 app.use(express.json());
 // Allow only specific origins
-const allowedOrigins = ["http://localhost:2222"];
+const allowedOrigins = [process.env.URL];
 
 const corsOptions = {
   origin: function (origin, callback) {
