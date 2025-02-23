@@ -1,7 +1,7 @@
 import { ENDPOINTS, fetcher } from "@api/useAxiosSWR";
 import Loader from "@components/common/Loader";
 import { EMAIL_PATTERN } from "@constants/index";
-import { AxiosError } from "axios";
+// import { AxiosError } from "axios";
 // import { log } from "console";
 // import { enqueueSnackbar } from "notistack";
 import { useState } from "react";

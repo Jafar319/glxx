@@ -12,12 +12,12 @@ const GetStartedModal = () => {
 
   // states
   const [loginSuccess, setLoginSuccess] = useState(false);
-  const [key, setKey] = useState(0);
+  // const [key, setKey] = useState(0);
 
-  useEffect(() => {
-    setKey((prevKey) => prevKey + 1); // Forces re-render on state change
-  }, [isStarting]);
-  if (!isStarting) return null;
+  // useEffect(() => {
+  //   setKey((prevKey) => prevKey + 1); // Forces re-render on state change
+  // }, [isStarting]);
+  // if (!isStarting) return null;
   
   return (
     <div
